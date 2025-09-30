@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const signupForm = document.getElementById("signup-form");
   const messageDiv = document.getElementById("message");
 
+  console.log("El archivo app.js se está ejecutando");
+
   // Function to fetch activities from API
   async function fetchActivities() {
     try {
