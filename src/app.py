@@ -11,13 +11,13 @@ from fastapi.responses import RedirectResponse
 import os
 from pathlib import Path
 
-app = FastAPI(title="Mergington High School API",
-              description="API for viewing and signing up for extracurricular activities")
+app = FastAPI(
+    title="Mergington High School API",
+    description="API for viewing and signing up for extracurricular activities"
+)
 
-# Mount the static files directory
-current_dir = Path(__file__).parent
-app.mount("/static", StaticFiles(directory=os.path.join(Path(__file__).parent,
-          "static")), name="static")
+# Montar la carpeta de archivos estáticos correctamente
+app.mount("/static", StaticFiles(directory=os.path.join(Path(__file__).parent, "static")), name="static")
 
 # In-memory activity database
 activities = {
